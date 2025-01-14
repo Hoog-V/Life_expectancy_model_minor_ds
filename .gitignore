@@ -163,3 +163,4 @@ cython_debug/
 *.csv
 *.excel
 *.RData
+.Rproj.user
