@@ -140,7 +140,7 @@ Window {
                             model: modelData.options
                             textRole: "label"
                             currentIndex: 2 // Set default selection as "Developed Countries"
-                            onCurrentIndexChanged: {
+                            onCurrentTextChanged: {
                                 customInputField.visible = (currentText === "Custom")
                                 if (currentText === "Custom") {
                                     customInputField.text = ""
@@ -153,7 +153,7 @@ Window {
                     TextField {
                         id: customInputField
                         text: ""
-                        placeholderText: "Enter custom value"
+                        placeholderText: "Enter custom value e.g. (" + modelData.options[modelData.options.length - 2].value + ")"
                         Layout.preferredWidth: 400
                         visible: false
                         // Restrict input to numbers
